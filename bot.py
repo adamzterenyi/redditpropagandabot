@@ -200,16 +200,14 @@ while True:
         # and the .reply() function to post it to reddit;
         # these will not be top-level comments;
         # so they will not be replies to a post but replies to a message
-        """
         random.choice(comments_without_replies).reply(generate_comment())
         print(datetime.datetime.now(), ': made a reply.')
         """
-        
         for comment in comments_without_replies:
             comment.reply(generate_comment())
             print(datetime.datetime.now(), ': made a reply.')
             time.sleep(6)
-        
+        """
         """
         top_comment.reply(generate_comment())
         print(datetime.datetime.now(), ': made a reply to top comment.')
