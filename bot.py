@@ -123,7 +123,7 @@ while True:
     # and an if statement to check whether the comment is authored by you or not
     not_my_comments = []
     for comment in all_comments:
-        if comment.author.name != 'hubertbotguy':
+        if comment.author.name != args.username:
             not_my_comments.append(comment)
     # HINT:
     # checking if this code is working is a bit more complicated than in the previous tasks;
@@ -177,7 +177,7 @@ while True:
         for comment in not_my_comments:
             hasreply = 0
             for reply in comment.replies.list():
-                if reply.author.name == 'hubertbotguy':
+                if reply.author.name == args.username:
                     hasreply += 1
             if hasreply < 1:
                 if comment.score() >= highest_score:
